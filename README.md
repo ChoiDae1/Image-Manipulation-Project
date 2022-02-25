@@ -47,5 +47,5 @@ Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, �
 텍스트를 잘 표현하는 이미지를 만들어 낼 수 있도록 latent vector를 업데이트 함. 물론 기존 이미지의 전체적인 apperance는 유지함. 
 
 StyleCLIP 논문에서는 구체적으로 **3가지의 방법**을 제시하는데, 여기서는 이 중 가장 직관적이면서도 쉬운 "**Latent Optimization**"을 구현했음. 
-
+(업데이트 예정)
 
