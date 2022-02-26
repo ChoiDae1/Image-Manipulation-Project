@@ -63,7 +63,7 @@ StyleCLIP 논문에서는 구체적으로 **3가지의 방법**을 제시하는�
 이외에도 **여러가지 latent vector와 Text Prompt 조합**을 통해 실험했고,</br>
 원본 이미지를  _아무리 좋은 quality 로 representation_ 하는 **latent vector**를 사용하더라도, **StyleCLIP**에서  _잘 작동하지는 않는_ 사실을 알았음. </br>
 이와 더불어 **StyleCLIP Task**에서 역시 **한국인의 이미지**보다 **서양인의 이미지**에서 _더 잘 작동하는 것_ 을 확인할 수 있었는데, 아마도 StyleGAN을 **pretrain할 때 사용한
-데이터의 bias문제**라고 판단됨.</br>향후 한국인 이미지 관련 프로젝트를 한다면 다른 pretrained dataset을 사용할 필요가 있어보임.(ex: 한국인 face dataset)
+데이터의 bias문제**라고 판단됨.</br>향후 한국인 이미지 관련 프로젝트를 한다면 다른 pretrain dataset을 사용할 필요가 있어보임.(ex: 한국인 face dataset)
 
 
 
