@@ -8,6 +8,8 @@
 **참고 논문:** [Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?](https://arxiv.org/abs/1904.03189)</br>
 **참고 코드:** [link](https://github.com/ndb796/PyTorch-StyleGAN-Face-Editting)</br>
 **방법:** **Pretrained StyleGAN, VGG16**을 이용해 latent vector가 만들어내는 이미지와 원본 이미지와의 **loss**를 계산 -> **latent vector 업데이트**</br></br>
+**Image2StyleGAN**은 _이미지를 representation하는_ **latent vector**를 **Pretrained StyleGAN**을 사용해 찾는 것을 말한다.</br>
+이러한 과정을 통해 특정 이미지에 대한 latent vector를 찾게되면, 이를 조작해 **이미지의 Style을 바꾸거나, 다른 이미지로 전환**할 수 있음.</br></br>
 구글에서 많은 연예인들의 사진들을 찾을 수 있었고, 결과적으로 다양한 사진에 대한 latent vector을 얻을 수 있었음.</br>
 Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, 일부는 그렇지 못했음.</br></br>
 **Example**) **왼쪽**은 구글에서 구한 **원본 이미지**고, **오른쪽**은 Image2StyleGAN 방법론을 통해 찾은 **latent vector를 통해 만들어진 이미지**</br></br>
@@ -19,7 +21,7 @@ Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, �
 <img width="20%" src="https://user-images.githubusercontent.com/95220313/155802781-5a0b04f0-c173-4b34-9b4e-576ae37e66fe.png"/></br></br>
 많은 수의 이미지를 통해 여러번 실험을 진행함, </br>
 결과적으로 representation이 좋은 latent vector를 가지고 있는 원본 이미지는 **_다음과 같은 특징들_** 을 가지고 있다는 것을 확인함. </br>
-- 보통 **서양인**임. (대체로 한국인 사진보다 더 좋은 latent vector를 가졌음.) 
+- 보통 **서양인**임. (대체로 한국인 이미지보다 더 좋은 latent vector를 가졌음.) 
 - input으로 들어가는 이미지에 **noise가 거의 없음, 화질 좋음.**
 - 사진에 **얼굴이 차지하는 비율**이 거의 **80퍼~90퍼**(얼굴외에 손이나 기타 다른 부위 혹은 배경들이 거의 보이지 않음)
 - 옆모습이나 측면보다 **정면샷**으로 찍은 얼굴이 더 잘 나옴.
@@ -48,7 +50,7 @@ Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, �
 
 StyleCLIP 논문에서는 구체적으로 **3가지의 방법**을 제시하는데, 여기서는 이 중 가장 직관적이면서도 쉬운 "**Latent Optimization**"을 구현했음. </br>
 실험결과 대체로 어느정도 text를 잘 반영하는 이미지를 생성가능했지만, 일부 latent vector에서는 이미지 왜곡이 생기면서 잘 작동하지 않는 것을 확인할 수 있었음.</br></br>
-**Example**) **STEP1**에서 이미지를 **잘 represent하는 latent vector**를 활용해 실험 진행함. </br>
+**Example**) **STEP1**에서 이미지를 **잘 represent하는 latent vector**를 활용해 실험 진행함.</br>
 ### Good case</br>
 **<latent vector: Jablonski, Text Prompt: Really angry face>**</br>
 <img width="35%" src="https://user-images.githubusercontent.com/95220313/155854429-a6f6bcb2-a17a-42f1-8d51-2979fec92e0a.png"/></br></br></br>
@@ -62,7 +64,7 @@ StyleCLIP 논문에서는 구체적으로 **3가지의 방법**을 제시하는�
 <img width="35%" src="https://user-images.githubusercontent.com/95220313/155854772-e6a28700-1416-4bce-8c46-eedc5606da66.jpg"/></br></br>
 이외에도 **여러가지 latent vector와 Text Prompt 조합**을 통해 실험했고,</br>
 원본 이미지를  _아무리 좋은 quality 로 representation_ 하는 **latent vector**를 사용하더라도, **StyleCLIP**에서  _잘 작동하지는 않는_ 사실을 알았음. </br>
-이와 더불어 **StyleCLIP Task**에서 역시 **한국인의 이미지**보다 **서양인의 이미지**에서 _더 잘 작동하는 것_ 을 확인할 수 있었는데, 아마도 StyleGAN을 **pretrain할 때 사용한
+이와 더불어 **StyleCLIP Task**에서 역시 **한국인 이미지**보다 **서양인 이미지**에서 _더 잘 작동하는 것_ 을 확인할 수 있었는데, 아마도 StyleGAN을 **pretrain할 때 사용한
 데이터의 bias문제**라고 판단됨.</br>향후 한국인 이미지 관련 프로젝트를 한다면 다른 pretrain dataset을 사용할 필요가 있어보임.(ex: 한국인 face dataset)
 
 
