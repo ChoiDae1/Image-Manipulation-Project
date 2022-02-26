@@ -6,6 +6,7 @@
 ## STEP1: 특정 사진에 대한 Latent vector 찾기 (Image2StyleGAN)
 **구현 코드:** [link](https://github.com/ChoiDae1/StyleGAN_Project/blob/master/Image2StyleGAN.ipynb)</br>
 **참고 논문:** [Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?](https://arxiv.org/abs/1904.03189)</br>
+ 　　　　　[A Style-Based Generator Architecture for Generative Adversarial Networks](https://arxiv.org/abs/1812.04948)</br>
 **참고 코드:** [link](https://github.com/ndb796/PyTorch-StyleGAN-Face-Editting)</br>
 **방법:** **Pretrained StyleGAN, VGG16**을 이용해 latent vector가 만들어내는 이미지와 원본 이미지와의 **loss**를 계산 -> **latent vector 업데이트**</br></br>
 **Image2StyleGAN**은 _이미지를 representation하는_ **latent vector**를 **Pretrained StyleGAN**을 사용해 찾는 것을 말한다.</br>
