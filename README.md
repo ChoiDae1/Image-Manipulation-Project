@@ -3,7 +3,7 @@
 
 나아가 **StyleCLIP**을 통해 사용자가 입력한 텍스트를 반영한 이미지를 만들어 내도록 **latent vector 업데이트**.
 </br></br>
-## STEP1: 특정 사진에 대한 Latent vector 찾기 (Image2StyleGAN)
+## STEP1: 특정 사진에 대한 latent vector 찾기 (Image2StyleGAN)
 **구현 코드:** [link](https://github.com/ChoiDae1/StyleGAN_Project/blob/master/Image2StyleGAN.ipynb)</br>
 **참고 논문:** [Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?](https://arxiv.org/abs/1904.03189)</br>
  　　　　　[A Style-Based Generator Architecture for Generative Adversarial Networks](https://arxiv.org/abs/1812.04948)</br>
@@ -27,7 +27,7 @@ Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, �
 - 사진에 **얼굴이 차지하는 비율**이 거의 **80퍼~90퍼**(얼굴외에 손이나 기타 다른 부위 혹은 배경들이 거의 보이지 않음)
 - 옆모습이나 측면보다 **정면샷**으로 찍은 얼굴이 더 잘 나옴.
 
-## STEP2: Latent Interpolation
+## STEP2: Latent vector를 변화시키면서 이미지의 변화 양상 관찰 (Latent Interpolation)
 **구현 코드:** [link](https://github.com/ChoiDae1/StyleGAN_Project/blob/master/Latent_vector_Analysis.ipynb)</br>
 **참고 코드:** [link](https://github.com/zaidbhat1234/Image2StyleGAN/blob/main/Image2Style_Implementation.ipynb)</br>
 **방법:** **STEP1**에서 두 이미지에 각각 대응하는 **latent vector**를 찾음 -> 계수합이 1인 **linear combination**으로 표현 -> **계수값에 변화**를 조금씩 주면서, 그에 따라 변하는 **이미지 변화** 확인 </br></br>
@@ -40,7 +40,7 @@ Latent vector들 중 상당수는 입력 이미지를 잘 represent했지만, �
 **<오바마 대통령의 latent vector와 조커의 latent vector를 사용해 진행한 결과>**</br>
 <img width="20%" src="https://user-images.githubusercontent.com/95220313/155807476-87ed3c31-7bde-4295-ab2b-a6886bb260a2.gif"/>
 
-## STEP3: StyleCLIP
+## STEP3: 텍스트를 반영한 이미지를 만들어 내도록 latent vector 업데이트 (StyleCLIP)
 **구현 코드:** [link](https://github.com/ChoiDae1/StyleGAN_Project/blob/master/StyleCLIP.ipynb)</br>
 **참고 논문:** [StyleCLIP: Text-Driven Manipulation of StyleGAN Imagery](https://arxiv.org/abs/2103.17249)</br>
 **참고 코드:** [link](https://github.com/ndb796/StyleCLIP-Tutorial/blob/main/StyleCLIP_Latent_Optimization.ipynb)</br> 
