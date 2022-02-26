@@ -60,7 +60,7 @@ StyleCLIP 논문에서는 구체적으로 **3가지의 방법**을 제시하는�
 
 ### Bad case</br>
 **<latent vector: 로제, Text Prompt: Really angry face>**</br>
-<img width="35%" src="https://user-images.githubusercontent.com/95220313/155855229-2f303217-f6f3-4584-a9c2-2dcfadb7042a.jpg"/></br></br>
+<img width="35%" src="https://user-images.githubusercontent.com/95220313/155855229-2f303217-f6f3-4584-a9c2-2dcfadb7042a.jpg"/></br></br></br>
 **<latent vector: 제니, Text Prompt: Smile face>**</br>
 <img width="35%" src="https://user-images.githubusercontent.com/95220313/155854772-e6a28700-1416-4bce-8c46-eedc5606da66.jpg"/></br></br>
 이외에도 **여러가지 latent vector와 Text Prompt 조합**을 통해 실험했고,</br>
