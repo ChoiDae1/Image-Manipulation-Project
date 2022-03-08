@@ -3,7 +3,7 @@
 
 나아가 **StyleCLIP**을 통해 사용자가 입력한 텍스트를 반영한 이미지를 만들어 내도록 **latent vector 업데이트**.
 
-결론적으로 StyleGAN과 StyleCLIP을 이용한 사용자 인터페이스 기반 이미지 조작을 목적으로 하는 프로젝트임.
+결론적으로 **StyleGAN과 StyleCLIP을 이용한 사용자 인터페이스 기반 이미지 조작**을 목적으로 하는 프로젝트임.
 
 발표 PPT -> [link](https://github.com/ChoiDae1/StyleGAN_Project/blob/master/StyleGAN%EA%B3%BC%20StyleCLIP%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%82%AC%EC%9A%A9%EC%9E%90%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EA%B8%B0%EB%B0%98%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%A1%B0%EC%9E%91%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20-%20CV%EB%B6%84%EB%B0%98.pdf)
 </br></br>
