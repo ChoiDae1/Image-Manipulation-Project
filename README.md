@@ -1,4 +1,4 @@
-# StyleGAN_Project
+# Image_Manipulation_Project
 **StyleGAN**을 활용해 사용자가 원하는 사진에 대한 **latent vector**를 찾고, **Interpolation** 분석. 
 
 나아가 **StyleCLIP**을 통해 사용자가 입력한 텍스트를 반영한 이미지를 만들어 내도록 **latent vector 업데이트**.
